@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <section class="display-flex" id="deposit-section">
+        <div id="atm-section">
+            <h1 class="main-heading">ATM Simulator</h1>
+            <div>
+                <h2>Balance: <span id="balance">0</span></h2>
+                <div>
+                    <label for="deposit"></label>
+                    <input id="deposit" name="deposit" type="number">
+                    <button id="depositBtn">Deposit</button>
+                </div>
+                <div>
+                    <label for="withdraw"></label>
+                    <input id="withdraw" name="withdraw" type="number">
+                    <button id="withdrawBtn">Withdraw</button>
+                </div>
+                <div>
+                    <h2 style="color: red;" id="error">
+                        </h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="./main-2.js"></script>
+</body>
+
+</html>

@@ -13,3 +13,7 @@
   - [x] github
   - [x] loops
   - [ ] 8_ball
+- **week_04:**
+  - [x] ATM_simulator
+  - [x] basic_DOM
+  - [x] pancake_maker
