@@ -19,8 +19,8 @@
   - [x] basic_DOM
   - [x] pancake_maker
 
-  - **week_06:**
+- **week_06:**
   - [x] Little_Zoo
-  - [x] Object_Ex_1
-  - [x] Object_Ex_2
-  - [] Object_Ex_3
+  - [x] Object_Exercise_1
+  - [x] Object_Exercise_2
+  - [] Object_Exercise_3
