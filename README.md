@@ -14,6 +14,13 @@
   - [x] loops
   - [ ] 8_ball
 - **week_04:**
+
   - [x] ATM_simulator
   - [x] basic_DOM
   - [x] pancake_maker
+
+  - **week_06:**
+  - [x] Little_Zoo
+  - [x] Object_Ex_1
+  - [x] Object_Ex_2
+  - [] Object_Ex_3
