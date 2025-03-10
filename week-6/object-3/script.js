@@ -176,6 +176,7 @@ Add a button in HTML that, when clicked, adds a new `Task` object to a `tasks` a
 //   displayTask();
 // }
 // addTaskBtn.addEventListener("click", insertTask);
+// =========================================================
 
 /* Task 7
 Create an object `weatherApp` with a method `fetchWeather(city)`.
@@ -185,14 +186,166 @@ Use `fetch` to get weather data from an API and display it in an HTML element.
 
 // Your code here
 
-async function getData() {
-  const url = "https://jsonplaceholder.typicode.com/users";
-  try {
-    const response = await fetch(url);
-    const jsData = await response.json();
-    console.log("data", jsData);
-  } catch (error) {
-    console.error(error.message);
-  }
+// async function getData() {
+//   const url = "https://jsonplaceholder.typicode.com/users";
+//   try {
+//     const response = await fetch(url);
+//     const data = await response.json();
+//     console.log("data", data);
+//   } catch (error) {
+//     console.error(error.message);
+//   }
+// }
+// getData();
+// const weatherDisplay = document.getElementById("weatherDisplay");
+// const apiKey = "c7d704633f98b2f48803ed1d7192753a";
+// const city = "Helsinki";
+// const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+// fetch(url)
+//   .then((response) => response.json())
+//   .then((data) => {
+//     weatherDisplay.innerHTML = `City: ${data.name}<br> Temperature: ${Math.ceil(
+//       data.main.temp
+//     )}°C <br>Weather: ${data.weather[0].description}`;
+//   })
+//   .catch((error) => console.error("Error fetching weather data:", error));
+// =========================================================
+/* Task 8
+Create a constructor function `Car` that takes `brand`, `model`, and `year`.
+In the constructor, add a method `age()` that calculates the car’s age.
+Instantiate a new `Car` and display its age on the webpage.
+*/
+
+// Your code here
+// function Car(brand, model, year) {
+//   this.brand = brand;
+//   this.model = model;
+//   this.year = year;
+//   this.age = function () {
+//     const currentYear = new Date().getFullYear();
+//     return currentYear - this.year;
+//   };
+// }
+
+// const myCar = new Car("Toyota", "Corolla", 2015);
+
+// document.body.innerHTML = `<h2>Car Brand: ${myCar.brand}<br>Model:${
+//   myCar.model
+// }<br> Car Age: ${myCar.age()} years</h2>`;
+
+// =========================================================
+
+/* Task 9
+Create an array `users` where each user has `name` and `score`.
+Add a button in HTML that sorts the users by score in descending order and updates the displayed list.
+*/
+
+// Your code here
+// const sortUserBtn = document.getElementById("sortUserBtn");
+// let users = [
+//   { name: "Jobs", score: 85 },
+//   { name: "Ali", score: 92 },
+//   { name: "Charlie", score: 78 },
+//   { name: "David", score: 95 },
+// ];
+// // display users
+// function displayUsers() {
+//   const userList = document.getElementById("userList");
+//   userList.innerHTML = ""; // Clear previous list
+//   users.forEach((user) => {
+//     const li = document.createElement("li");
+//     li.textContent = `${user.name}: ${user.score}`;
+//     userList.appendChild(li);
+//   });
+// }
+// // Sort Users
+// function sortUsers() {
+//   users.sort((a, b) => b.score - a.score);
+//   displayUsers();
+// }
+
+// sortUserBtn.addEventListener("click", sortUsers);
+// // show all users without sorting
+// displayUsers();
+
+// =======================================================
+/* Task 10
+Create an object `shoppingList` with an array `items`.
+Add an input field and button to allow users to add new items to `items` and display the updated list.
+*/
+
+// Your code here
+// const shoppingList = {
+//   items: ["Milk", "Bread", "Eggs"],
+// };
+// // Function to display shopping list
+// function displayList() {
+//   const list = document.getElementById("shoppingList");
+//   list.innerHTML = "";
+//   shoppingList.items.forEach((item) => {
+//     const li = document.createElement("li");
+//     li.textContent = item;
+//     list.appendChild(li);
+//   });
+// }
+// // Function to add a new item to the list
+// function addItem() {
+//   const input = document.getElementById("itemInput");
+//   const newItem = input.value.trim(); // Get input value & remove extra spaces
+
+//   if (newItem) {
+//     // Check if input is not empty
+//     shoppingList.items.push(newItem);
+//     input.value = "";
+//     displayList();
+//   } else {
+//     alert("Please enter an item.");
+//   }
+// }
+// // display of shopping list
+// displayList();
+// =======================================================
+/* Task 11
+Create an array of `posts` where each post has `title`, `content`, and `likes`.
+Add a "Like" button next to each post that increases the `likes` count and updates the display.
+*/
+
+// Your code here
+let posts = [
+  { title: "Post 1", content: "This is the first post.", likes: 0 },
+  { title: "Post 2", content: "Another blog post here!", likes: 0 },
+  { title: "Post 3", content: "Yet another interesting post.", likes: 0 },
+];
+// Function to display posts
+function displayPosts() {
+  const container = document.getElementById("postsContainer");
+  container.innerHTML = "";
+
+  posts.forEach((post, index) => {
+    const postDiv = document.createElement("div");
+    postDiv.innerHTML = `
+          <h3>${post.title}</h3>
+          <p>${post.content}</p>
+          <p>Likes: <span id="likes-${index}">${post.likes}</span></p>
+          <button onclick="likePost(${index})">Like</button>
+          <hr>
+      `;
+    container.appendChild(postDiv);
+  });
 }
-getData();
+// Function to increase likes
+function likePost(index) {
+  posts[index].likes += 1;
+  document.getElementById(`likes-${index}`).textContent = posts[index].likes;
+}
+// display of posts
+displayPosts();
+
+/* Task 12
+Create a constructor function `Employee` with `name`, `position`, and `salary`.
+Add a method `increaseSalary(percent)` that increases the salary by a given percentage.
+Create an employee and increase their salary dynamically.
+*/
+
+// Your code here
