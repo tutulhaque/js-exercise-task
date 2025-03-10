@@ -23,4 +23,4 @@
   - [x] Little_Zoo
   - [x] Object_Exercise_1
   - [x] Object_Exercise_2
-  - [] Object_Exercise_3
+  - [x] Object_Exercise_3
