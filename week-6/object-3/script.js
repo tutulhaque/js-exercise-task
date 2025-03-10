@@ -91,7 +91,7 @@ Display `value` in an HTML element and update it dynamically when buttons are cl
 // };
 // increaseValue.addEventListener("click", increase);
 // decreaseValue.addEventListener("click", decrease);
-// // =========================================================
+// =========================================================
 /* Task 5
 Create an object `product` with `name`, `price`, and `quantity`.
 Add an input field in HTML where the user can enter a quantity to purchase.
@@ -99,39 +99,86 @@ Update the `quantity` property and display the total price dynamically.
 */
 
 // Your code here
-const increaseQtyBtn = document.getElementById("increaseQtyBtn");
-const decreaseQtyBtn = document.getElementById("decreaseQtyBtn");
-const inputQty = document.getElementById("inputQty");
-const displayProductPrice = document.getElementById("displayProductPrice");
+// const increaseQtyBtn = document.getElementById("increaseQtyBtn");
+// const decreaseQtyBtn = document.getElementById("decreaseQtyBtn");
+// const inputQty = document.getElementById("inputQty");
+// const displayProductPrice = document.getElementById("displayProductPrice");
 
-const product = {
-  name: "iPhone",
-  price: 100,
-  quantity: 0,
-};
+// const product = {
+//   name: "iPhone",
+//   price: 100,
+//   quantity: 0,
+// };
 
-const updatePrice = () => {
-  displayProductPrice.innerText = product.price * product.quantity;
-};
+// const updatePrice = () => {
+//   displayProductPrice.innerText = product.price * product.quantity;
+// };
 
-const increaseQty = () => {
-  const qty = parseInt(inputQty.value);
-  if (!isNaN(qty) && qty > 0) {
-    product.quantity += qty;
-    updatePrice();
-    console.log(product);
-    inputQty.value = "";
+// const increaseQty = () => {
+//   const qty = parseInt(inputQty.value);
+//   if (!isNaN(qty) && qty > 0) {
+//     product.quantity += qty;
+//     updatePrice();
+//     console.log(product);
+//     inputQty.value = "";
+//   }
+// };
+
+// const decreaseQty = () => {
+//   const qty = parseInt(inputQty.value);
+//   if (!isNaN(qty) && qty > 0) {
+//     product.quantity = Math.max(0, product.quantity - qty);
+//     updatePrice();
+//     inputQty.value = "";
+//   }
+// };
+
+// increaseQtyBtn.addEventListener("click", increaseQty);
+// decreaseQtyBtn.addEventListener("click", decreaseQty);
+
+// =========================================================
+
+/* Task 6
+Define a `Task` constructor that takes `title`, `description`, and `completed`.
+Add a button in HTML that, when clicked, adds a new `Task` object to a `tasks` array and displays it on the page.
+*/
+
+// Your code here
+const addTaskBtn = document.getElementById("addTaskBtn");
+const displayTask = document.getElementById("displayTask");
+
+class Task {
+  constructor(title, description, completed = false) {
+    this.title = title;
+    this.description = description;
+    this.completed = completed;
   }
-};
+}
 
-const decreaseQty = () => {
-  const qty = parseInt(inputQty.value);
-  if (!isNaN(qty) && qty > 0) {
-    product.quantity = Math.max(0, product.quantity - qty);
-    updatePrice();
-    inputQty.value = "";
+const tasks = [];
+
+function displayTasks() {
+  displayTask.innerHTML = "";
+  tasks.forEach((task, index) => {
+    const li = document.createElement("li");
+    li.innerHTML = `<strong>${task.title}</strong>: ${task.description} - <em>${
+      task.completed === "yes" ? "Completed" : "Not Completed"
+    }</em>`;
+    displayTask.appendChild(li);
+  });
+}
+
+function insertTask() {
+  const title = prompt("Enter Task Title:");
+  const description = prompt("Enter Task Description:");
+  const completed = prompt(" Yes, for completed and No for not completed");
+  if (title && description && completed) {
+    const newTask = new Task(title, description, completed.toLowerCase());
+    tasks.push(newTask);
+    displayTasks();
+  } else {
+    alert("Task title and description are required!");
   }
-};
+}
 
-increaseQtyBtn.addEventListener("click", increaseQty);
-decreaseQtyBtn.addEventListener("click", decreaseQty);
+addTaskBtn.addEventListener("click", insertTask);

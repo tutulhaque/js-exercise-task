@@ -22,3 +22,10 @@ input {
   height: 32px;
   margin: 0px 2px;
 }
+ol {
+  font-family: inherit;
+  font-size: 26px;
+}
+ol li {
+  color: black;
+}
