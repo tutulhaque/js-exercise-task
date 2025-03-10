@@ -385,3 +385,119 @@ Create an employee and increase their salary dynamically.
 // }
 // // display of employee details
 // displayEmployee();
+
+// =======================================================
+/* Task 13
+Create an object `timer` with `seconds` and a method `start()` that counts seconds up.
+Display the timer in an HTML element and update it every second.
+*/
+
+// Your code here
+// const timerBtn = document.getElementById("startButton");
+// const timer = {
+//   seconds: 0,
+//   intervalId: null,
+
+//   start() {
+//     if (this.intervalId) return; // Prevent multiple intervals
+//     this.intervalId = setInterval(() => {
+//       this.seconds++;
+//       document.getElementById("timer").textContent = this.seconds;
+//     }, 1000);
+//   },
+// };
+
+// timerBtn.addEventListener("click", () => timer.start());
+// =======================================================
+/* Task 14
+Create a constructor function `Book` that takes `title`, `author`, and `pages`.
+Create a simple book library that allows users to add books via an HTML form and displays them dynamically.
+*/
+
+// Your code here
+// function Book(title, author, pages) {
+//   this.title = title;
+//   this.author = author;
+//   this.pages = pages;
+// }
+
+// const library = [];
+
+// // Function to display books
+// function displayBooks() {
+//   const bookList = document.getElementById("bookList");
+//   bookList.innerHTML = "";
+
+//   library.forEach((book) => {
+//     const listItem = document.createElement("li");
+//     listItem.textContent = `${book.title} by ${book.author} (${book.pages} pages)`;
+//     bookList.appendChild(listItem);
+//   });
+// }
+
+// // Handle the form submission
+// const bookForm = document.getElementById("bookForm");
+// bookForm.addEventListener("submit", function (event) {
+//   event.preventDefault(); // Prevent page refresh on form submit
+
+//   const title = document.getElementById("title").value;
+//   const author = document.getElementById("author").value;
+//   const pages = document.getElementById("pages").value;
+
+//   // Create a new book and add to the library
+//   const newBook = new Book(title, author, parseInt(pages));
+//   library.push(newBook);
+
+//   // Clear the form
+//   bookForm.reset();
+
+//   // Display updated list of books
+//   displayBooks();
+// });
+// =======================================================
+/* Task 15
+Create an object `foxTracker` with a `foxes` array.
+Add an input field and button that allows users to add new foxes (with name and location) to the array.
+Display the list of foxes dynamically in an HTML element.
+*/
+
+// Your code here
+// foxTracker object
+// const foxTracker = {
+//   // foxes array
+//   foxes: [],
+
+//   // Function to display the list of foxes
+//   displayFoxes() {
+//     const foxList = document.getElementById("foxList");
+//     foxList.innerHTML = ""; // Clear the list before updating
+
+//     // Loop through the foxes array
+//     this.foxes.forEach((fox) => {
+//       const listItem = document.createElement("li");
+//       listItem.textContent = `${fox.name} - Location: ${fox.location}`;
+//       foxList.appendChild(listItem);
+//     });
+//   },
+
+//   // Function to add a new fox to the array
+//   addFox(name, location) {
+//     this.foxes.push({ name, location });
+//     this.displayFoxes(); // Update the displayed list
+//   },
+// };
+
+// // Event listener for the "Add Fox" button
+// document.getElementById("addFoxBtn").addEventListener("click", () => {
+//   const foxName = document.getElementById("foxName").value;
+//   const foxLocation = document.getElementById("foxLocation").value;
+
+//   // Add the new fox to the foxTracker object
+//   if (foxName && foxLocation) {
+//     foxTracker.addFox(foxName, foxLocation);
+//     document.getElementById("foxName").value = "";
+//     document.getElementById("foxLocation").value = "";
+//   } else {
+//     alert("Please enter both name and location.");
+//   }
+// });
