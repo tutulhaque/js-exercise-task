@@ -20,7 +20,13 @@
   - [x] pancake_maker
 
 - **week_06:**
+
   - [x] Little_Zoo
   - [x] Object_Exercise_1
   - [x] Object_Exercise_2
   - [x] Object_Exercise_3
+
+- **week_07:**
+  - [x] Localstorage_Exercise
+  - [x] JSON_exercise
+  - [x] Pancake_03_exercise
