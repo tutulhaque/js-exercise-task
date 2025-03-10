@@ -312,36 +312,37 @@ Add a "Like" button next to each post that increases the `likes` count and updat
 */
 
 // Your code here
-let posts = [
-  { title: "Post 1", content: "This is the first post.", likes: 0 },
-  { title: "Post 2", content: "Another blog post here!", likes: 0 },
-  { title: "Post 3", content: "Yet another interesting post.", likes: 0 },
-];
-// Function to display posts
-function displayPosts() {
-  const container = document.getElementById("postsContainer");
-  container.innerHTML = "";
+// let posts = [
+//   { title: "Post 1", content: "This is the first post.", likes: 0 },
+//   { title: "Post 2", content: "Another blog post here!", likes: 0 },
+//   { title: "Post 3", content: "Yet another interesting post.", likes: 0 },
+// ];
+// // Function to display posts
+// function displayPosts() {
+//   const container = document.getElementById("postsContainer");
+//   container.innerHTML = "";
 
-  posts.forEach((post, index) => {
-    const postDiv = document.createElement("div");
-    postDiv.innerHTML = `
-          <h3>${post.title}</h3>
-          <p>${post.content}</p>
-          <p>Likes: <span id="likes-${index}">${post.likes}</span></p>
-          <button onclick="likePost(${index})">Like</button>
-          <hr>
-      `;
-    container.appendChild(postDiv);
-  });
-}
-// Function to increase likes
-function likePost(index) {
-  posts[index].likes += 1;
-  document.getElementById(`likes-${index}`).textContent = posts[index].likes;
-}
-// display of posts
-displayPosts();
+//   posts.forEach((post, index) => {
+//     const postDiv = document.createElement("div");
+//     postDiv.innerHTML = `
+//           <h3>${post.title}</h3>
+//           <p>${post.content}</p>
+//           <p>Likes: <span id="likes-${index}">${post.likes}</span></p>
+//           <button onclick="likePost(${index})">Like</button>
+//           <hr>
+//       `;
+//     container.appendChild(postDiv);
+//   });
+// }
+// // Function to increase likes
+// function likePost(index) {
+//   posts[index].likes += 1;
+//   document.getElementById(`likes-${index}`).textContent = posts[index].likes;
+// }
+// // display of posts
+// displayPosts();
 
+// =======================================================
 /* Task 12
 Create a constructor function `Employee` with `name`, `position`, and `salary`.
 Add a method `increaseSalary(percent)` that increases the salary by a given percentage.
@@ -349,3 +350,38 @@ Create an employee and increase their salary dynamically.
 */
 
 // Your code here
+// class Employee {
+//   constructor(name, position, salary) {
+//     this.name = name;
+//     this.position = position;
+//     this.salary = salary;
+//   }
+
+//   increaseSalary(percent) {
+//     this.salary += (this.salary * percent) / 100;
+//   }
+// }
+
+// // Create an employee instance
+// let employee = new Employee("John Doe", "Software Engineer", 50000);
+// console.log(employee);
+// // display employee details
+// function displayEmployee() {
+//   document.getElementById("empName").textContent = employee.name;
+//   document.getElementById("empPosition").textContent = employee.position;
+//   document.getElementById("empSalary").textContent = employee.salary.toFixed(2);
+// }
+
+// // increase salary dynamically
+// function applyIncrease() {
+//   let percent = parseFloat(document.getElementById("increasePercent").value);
+//   if (!isNaN(percent) && percent > 0) {
+//     employee.increaseSalary(percent);
+//     displayEmployee();
+//     document.getElementById("increasePercent").value = "";
+//   } else {
+//     alert("Please enter a valid percentage.");
+//   }
+// }
+// // display of employee details
+// displayEmployee();
