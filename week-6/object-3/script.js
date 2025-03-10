@@ -5,19 +5,19 @@ Instantiate a new user and call `showInfo()`.
 */
 
 // Your code here
-function UserFun(username, email) {
-  this.username = username;
-  this.email = email;
-  this.showInfo = function () {
-    console.log(`Username: ${this.username}, Email: ${this.email}`);
-  };
-}
+// function UserFun(username, email) {
+//   this.username = username;
+//   this.email = email;
+//   this.showInfo = function () {
+//     console.log(`Username: ${this.username}, Email: ${this.email}`);
+//   };
+// }
 
-// Instantiate a new user
-const user1 = new UserFun("JohnDoe", "johndoe@example.com");
+// // Instantiate a new user
+// const user1 = new UserFun("JohnDoe", "johndoe@example.com");
 
-// Call showInfo method
-user1.showInfo();
+// // Call showInfo method
+// user1.showInfo();
 
 // =========================================================
 /* Task 2
@@ -144,41 +144,55 @@ Add a button in HTML that, when clicked, adds a new `Task` object to a `tasks` a
 */
 
 // Your code here
-const addTaskBtn = document.getElementById("addTaskBtn");
-const displayTask = document.getElementById("displayTask");
+// const addTaskBtn = document.getElementById("addTaskBtn");
+// const display = document.getElementById("display");
 
-class Task {
-  constructor(title, description, completed = false) {
-    this.title = title;
-    this.description = description;
-    this.completed = completed;
+// class Tasks {
+//   constructor(title, description, completed) {
+//     this.title = title;
+//     this.description = description;
+//     this.completed = completed;
+//   }
+// }
+// const tasks = [];
+
+// function displayTask() {
+//   tasks.forEach((task, index) => {
+//     const li = document.createElement("li");
+//     li.innerHTML = `<strong>${task.title}</strong> - <span>${
+//       task.description
+//     }</span> - <em>${
+//       task.completed === "yes" ? "completed" : "not completed"
+//     }</em>`;
+//     display.appendChild(li);
+//   });
+// }
+// function insertTask() {
+//   const title = prompt("Enter your title");
+//   const description = prompt("Enter your description");
+//   const completed = prompt("Yes, if its complete");
+//   const newTask = new Tasks(title, description, completed.toLowerCase());
+//   tasks.push(newTask);
+//   displayTask();
+// }
+// addTaskBtn.addEventListener("click", insertTask);
+
+/* Task 7
+Create an object `weatherApp` with a method `fetchWeather(city)`.
+Use `fetch` to get weather data from an API and display it in an HTML element.
+(API: OpenWeather or any free weather API)
+*/
+
+// Your code here
+
+async function getData() {
+  const url = "https://jsonplaceholder.typicode.com/users";
+  try {
+    const response = await fetch(url);
+    const jsData = await response.json();
+    console.log("data", jsData);
+  } catch (error) {
+    console.error(error.message);
   }
 }
-
-const tasks = [];
-
-function displayTasks() {
-  displayTask.innerHTML = "";
-  tasks.forEach((task, index) => {
-    const li = document.createElement("li");
-    li.innerHTML = `<strong>${task.title}</strong>: ${task.description} - <em>${
-      task.completed === "yes" ? "Completed" : "Not Completed"
-    }</em>`;
-    displayTask.appendChild(li);
-  });
-}
-
-function insertTask() {
-  const title = prompt("Enter Task Title:");
-  const description = prompt("Enter Task Description:");
-  const completed = prompt(" Yes, for completed and No for not completed");
-  if (title && description && completed) {
-    const newTask = new Task(title, description, completed.toLowerCase());
-    tasks.push(newTask);
-    displayTasks();
-  } else {
-    alert("Task title and description are required!");
-  }
-}
-
-addTaskBtn.addEventListener("click", insertTask);
+getData();
