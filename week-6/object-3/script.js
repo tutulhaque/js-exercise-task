@@ -198,7 +198,7 @@ Use `fetch` to get weather data from an API and display it in an HTML element.
 // }
 // getData();
 // const weatherDisplay = document.getElementById("weatherDisplay");
-// const apiKey = "dummyToken";
+// const apiKey = "c7d704633f98b2f48803ed1d7192753a";
 // const city = "Helsinki";
 // const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
