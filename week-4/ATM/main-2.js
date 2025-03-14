@@ -9,8 +9,8 @@ const errorMessage = document.getElementById("error");
 
 let balanceTotal = 0;
 const checkCredentials = () => {
-  const userName = prompt("Enter your username:");
-  const password = prompt("Enter your password:");
+  const userName = prompt("Enter your username:'admin'");
+  const password = prompt("Enter your password:'admin");
 
   if (userName === correctUserName && password === correctPassword) {
     alert("Login successful! You can now deposit and withdraw money.");

@@ -12,12 +12,17 @@
 - **week_03:**
   - [x] github
   - [x] loops
-  - [ ] 8_ball
+  - [x] 8_ball
 - **week_04:**
 
   - [x] ATM_simulator
   - [x] basic_DOM
   - [x] pancake_maker
+
+- **week_05:**
+
+  - [x] Array
+  - [ ] Pancake_maker_2
 
 - **week_06:**
 
