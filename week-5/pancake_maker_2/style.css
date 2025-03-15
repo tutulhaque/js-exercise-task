@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+body {
+  font-family: "Nunito Sans", serif;
+  background-color: #ffffff;
+  color: #000000;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.image-container {
+  position: relative;
+  width: 50%; /* Left side takes up 50% of the width */
+  height: 100vh; /* Full height */
+}
+
+.image-container img {
+  object-fit: cover;
+  width: 100%; /* Ensure the image covers the container */
+  height: 100%; /* Full height */
+}
+
+.form-container {
+  width: 50%; /* Right side takes up 50% of the width */
+  padding: 50px;
+  height: 100vh;
+  overflow-y: auto; /* Make the content scrollable */
+  box-sizing: border-box;
+}
+
+.price-banner {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #d17b49;
+  color: white;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+h3 {
+  margin-top: 15px;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+select,
+label {
+  display: block;
+  margin-top: 10px;
+}
