@@ -22,7 +22,7 @@
 - **week_05:**
 
   - [x] Array
-  - [ ] Pancake_maker_2
+  - [x] Pancake_maker_2
 
 - **week_06:**
 
