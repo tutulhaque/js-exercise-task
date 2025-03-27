@@ -38,6 +38,13 @@
   - [ ] Pancake_03_exercise
 
 - **week_08:**
+
   - [x] Error-handling
   - [x] Fault-finding
   - [x] Js-Writing-practices
+
+- **week_09:**
+  - [x] Async
+  - [x] Chaining
+  - [x] Destructuring
+  - [x] Spread-rest
