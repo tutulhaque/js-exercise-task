@@ -68,7 +68,7 @@ Write a function that returns only the restaurants with a rating of 4 or higher.
 // }
 // // popularRestaurant(restaurants);
 // console.log(popularRestaurant(restaurants));
-
+// ========== Task-4 =========
 /* Task 4
 Define an object named `bankAccount` with properties `accountHolder`, `balance`, and `transactions` (an array of numbers).
 Write a function that calculates the total balance after all transactions.
@@ -145,6 +145,8 @@ Write a function that calculates the total balance after all transactions.
 // console.log(a);
 // console.log(sum);
 
+// ========== Task-5 =========
+
 /* Task 5
 Create an array `students` where each student has `name`, `scores` (array of numbers), and `averageScore` (initially null).
 Write a function that calculates and updates each student's `averageScore`.
@@ -172,6 +174,8 @@ Write a function that calculates and updates each student's `averageScore`.
 //   console.log(students);
 // }
 // calculateAverageScore(students);
+
+// ========== Task-6 =========
 
 /* Task 6
 Define an array named `courses`, each containing `courseName`, `instructor`, and `studentsEnrolled`.
@@ -206,6 +210,7 @@ Write a function that logs the course name of any course with more than 30 stude
 // }
 // popularCourses();
 
+// ========== Task-7 =========
 /* Task 7
 Create an object `pet` with properties `species`, `name`, and `isVaccinated`.
 Write a function that returns `"Vaccination required"` if the pet is not vaccinated.
@@ -227,6 +232,7 @@ Write a function that returns `"Vaccination required"` if the pet is not vaccina
 
 // checkForVaccination();
 
+// ========== Task-8 =========
 /* Task 8
 Define an object named `city` with properties `name`, `population`, and `landmark`.
 Write a function that logs `"This is a big city!"` if the population exceeds 1,000,000.
@@ -246,6 +252,7 @@ Write a function that logs `"This is a big city!"` if the population exceeds 1,0
 // }
 // mostPopulatedCity();
 
+// ========== Task-9 =========
 /* Task 9
 Create an array `transactions`, where each transaction is an object with `type` ("credit" or "debit") and `amount`.
 Write a function that calculates the total balance after processing all transactions.
@@ -269,6 +276,8 @@ Write a function that calculates the total balance after processing all transact
 // }
 // totalBalance(transactions);
 
+// ========== Task-10 =========
+
 /* Task 10
 Define an object named `foxPack` containing an array of fox objects.
 Each fox has `name`, `age`, and `furColor`.
@@ -291,6 +300,8 @@ Write a function that filters out only the foxes that are younger than 2.
 
 // console.log("Foxes younger than 2: ", filterYoungFoxes(foxPack));
 
+// ========== Task-11 =========
+
 /* Task 11
 Create an object `gameCharacter` with properties `name`, `level`, `health`, and `inventory` (an array).
 Write a function that logs all items in the character’s inventory.
@@ -311,6 +322,7 @@ Write a function that logs all items in the character’s inventory.
 
 // logInventory(gameCharacter);
 
+// ========== Task-12 =========
 /* Task 12
 Define an array named `employees`, where each employee has a `name`, `role`, and `workingHours`.
 Write a function that finds and logs employees who work more than 40 hours.
@@ -337,6 +349,8 @@ function findEmployeesWorkingMoreThan40(employees) {
 }
 
 findEmployeesWorkingMoreThan40(employees);
+
+// ========== Task-13 =========
 
 /* Task 13
 Create an array `musicAlbums` where each album has `title`, `artist`, and `releaseYear`.
@@ -369,6 +383,8 @@ function albumsAfter2000(musicAlbums) {
 
 albumsAfter2000(musicAlbums);
 
+// ========== Task-14 =========
+
 /* Task 14
 Define an array named `cars`, each containing `brand`, `model`, and `horsepower`.
 Write a function that finds and returns the car with the highest horsepower.
@@ -395,6 +411,7 @@ console.log(
   `The car with the highest horsepower is the ${car.brand} ${car.model} with ${car.horsepower} horsepower.`
 );
 
+// ========== Task-15 =========
 /* Task 15
 Create an array of `airports`, where each airport has `name`, `country`, and `flightsPerDay`.
 Write a function that finds the airport with the most daily flights.

@@ -38,6 +38,7 @@ Add a method `changeEmail(newEmail)` that updates the user's email.
 // const userTwo = new User("Jobs", "jobs@gmail.com");
 // userOne.showInfo();
 // userTwo.showInfo();
+
 // =========================================================
 /* Task 3
 Create an object `theme` with properties `name` (light or dark) and `isActive`.
@@ -60,6 +61,7 @@ Add a button in HTML. When clicked, toggle the theme between light and dark, upd
 // }
 
 // themeBtn.addEventListener("click", changeTheme);
+
 // =========================================================
 /* Task 4
 Create an object `counter` with a `value` property.
@@ -91,6 +93,7 @@ Display `value` in an HTML element and update it dynamically when buttons are cl
 // };
 // increaseValue.addEventListener("click", increase);
 // decreaseValue.addEventListener("click", decrease);
+
 // =========================================================
 /* Task 5
 Create an object `product` with `name`, `price`, and `quantity`.
@@ -176,6 +179,7 @@ Add a button in HTML that, when clicked, adds a new `Task` object to a `tasks` a
 //   displayTask();
 // }
 // addTaskBtn.addEventListener("click", insertTask);
+
 // =========================================================
 
 /* Task 7
@@ -210,6 +214,7 @@ Use `fetch` to get weather data from an API and display it in an HTML element.
 //     )}°C <br>Weather: ${data.weather[0].description}`;
 //   })
 //   .catch((error) => console.error("Error fetching weather data:", error));
+
 // =========================================================
 /* Task 8
 Create a constructor function `Car` that takes `brand`, `model`, and `year`.
@@ -305,6 +310,7 @@ Add an input field and button to allow users to add new items to `items` and dis
 // }
 // // display of shopping list
 // displayList();
+
 // =======================================================
 /* Task 11
 Create an array of `posts` where each post has `title`, `content`, and `likes`.
@@ -408,6 +414,7 @@ Display the timer in an HTML element and update it every second.
 // };
 
 // timerBtn.addEventListener("click", () => timer.start());
+
 // =======================================================
 /* Task 14
 Create a constructor function `Book` that takes `title`, `author`, and `pages`.
@@ -454,6 +461,7 @@ Create a simple book library that allows users to add books via an HTML form and
 //   // Display updated list of books
 //   displayBooks();
 // });
+
 // =======================================================
 /* Task 15
 Create an object `foxTracker` with a `foxes` array.
