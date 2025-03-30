@@ -1,38 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 body {
   background-color: #ffffff;
   color: #000000;
   display: flex;
   justify-content: center;
-  align-items: center;
   margin: 0;
   min-height: 100vh;
   overflow: hidden;
+  font-family: "Poppins", sans-serif;
 }
 
 .container {
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
   width: 100vw;
+  height: 100vh;
 }
 
 .image-container {
-  position: relative;
-  flex: 1;
-  min-height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 50vw;
+  height: 100vh;
+  z-index: -1;
 }
 
 .image-container img {
   object-fit: cover;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 .form-container {
   flex: 1;
   padding: 50px;
   min-height: 100vh;
+  max-width: 50vw;
   overflow-y: auto;
+  margin-left: 50vw;
 }
 
 .price-banner {
@@ -49,8 +54,12 @@ body {
   align-items: center;
   font-size: 20px;
 }
+h2 {
+  color: #d17b49;
+}
 
 h3 {
+  color: #d17b49;
   margin-top: 15px;
 }
 
@@ -62,4 +71,125 @@ select,
 label {
   display: block;
   margin-top: 10px;
+}
+.order-summary {
+  margin: 20px 0px 60px 0px;
+  padding: 20px 10px 50px 10px;
+  border: 1px solid #d17b49;
+}
+button {
+  background-color: #d17b49;
+  border: 1px solid #d17b49;
+  border-radius: 2px;
+  padding: 10px 15px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* All Orders Page Layout */
+.container-orders {
+  display: flex;
+  height: 100vh;
+}
+.container-orders .image-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 30vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.container-orders .image-container img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.container-orders .form-container {
+  flex: 1;
+  padding: 50px;
+  min-height: 100vh;
+  max-width: 70vw;
+  overflow-y: auto;
+  margin-left: 30vw;
+}
+
+.search-filter-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  width: 60%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.filter-dropdown {
+  width: 30%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#ordersTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#ordersTable th,
+#ordersTable td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+#ordersTable th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+#ordersTable tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Add this to your style.css */
+
+/* Style for the "Show Orders" text */
+a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #000000;
+}
+.show-orders {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #d17b49;
+  padding: 5px 10px;
+  border-radius: 2px;
+  border: 1px solid #d17b49;
+  transition: background-color 0.3s;
+  color: #ffffff;
+}
+.show-orders a {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.show-orders a:hover {
+  color: #b9b9b9;
+  transition: 0.5s;
+}
+#ordersTable th,
+#ordersTable td {
+  font-size: 14px;
 }

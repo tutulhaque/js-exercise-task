@@ -8,9 +8,10 @@
 </head>
 
 <body>
+    <div class="show-orders"><a href="./all-orders.html">Show Orders</a></div>
     <div class="container">
         <div class="image-container">
-            <img src="pancake.jpeg" alt="Delicious pancakes" />
+            <img src="pancake.jpg" alt="Delicious pancakes" />
             <div class="price-banner"><span id="totalPrice">5€</span></div>
         </div>
 
@@ -64,14 +65,16 @@
             </form>
 
             <!-- Order Summary Display -->
-            <div id="orderSummary">
+            <div class="order-summary" id="orderSummary">
                 <h3>Order Summary</h3>
-                <p id="summaryText">Your order details will appear here.</p>
+                <p id="summaryText">Order details will appear here.</p>
             </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

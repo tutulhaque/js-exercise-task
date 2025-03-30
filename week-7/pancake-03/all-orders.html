@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Orders</title>
+    <link href="https://cdn.jsdelivr.net/npm/ionicons@5.5.0/dist/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="show-orders"><a href="./">Add Order</a></div>
+    <div class="container-orders">
+        <!-- Left image section (same as index.html) -->
+        <div class="image-container">
+            <img src="./pancake.jpg" alt="Pancake Image">
+        </div>
+
+        <!-- Right content section (search bar, filter, and table) -->
+        <div class="form-container">
+            <h2>All Orders</h2>
+
+            <!-- Search bar and filter dropdown -->
+            <div class="search-filter-container">
+                <input type="text" id="searchBar" placeholder="Search Orders by Name" class="search-bar">
+                <select id="statusFilter" class="filter-dropdown">
+                    <option value="">Filter by Status</option>
+                    <option value="waiting">Waiting</option>
+                    <option value="ready">Get Ready</option>
+                    <option value="delivered">Delivered</option>
+                </select>
+            </div>
+
+            <!-- Table to display the orders -->
+            <div id="ordersTableContainer">
+                <table id="ordersTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Pancake Type</th>
+                            <th>Toppings</th>
+                            <th>Extras</th>
+                            <th>Delivery Method</th>
+                            <th>Status</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ordersTableBody">
+                        <!-- Order rows will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="./ordersScript.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+</body>
+
+</html>

@@ -35,7 +35,7 @@
 
   - [x] Localstorage_Exercise
   - [x] JSON_exercise
-  - [ ] Pancake_03_exercise
+  - [x] Pancake_03_exercise
 
 - **week_08:**
 
