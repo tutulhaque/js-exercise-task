@@ -11,9 +11,3 @@ const generateRandomNumber = (min, max) => {
   return Math.floor(Math.random() * (min - max + 1) + max);
 };
 console.log(generateRandomNumber(1, 10));
-console.log(generateRandomNumber(1, 10));
-console.log(generateRandomNumber(1, 10));
-console.log(generateRandomNumber(1, 10));
-console.log(generateRandomNumber(1, 10));
-console.log(generateRandomNumber(1, 10));
-console.log(generateRandomNumber(1, 10));
