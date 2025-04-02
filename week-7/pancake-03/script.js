@@ -92,6 +92,8 @@ function handleOrder() {
   totalPriceDisplay.textContent = `€${totalPrice.toFixed(2)}`;
 
   alert("Your order has been placed successfully! ✅");
+  pancakeForm.reset();
+  totalPriceDisplay.textContent = "€5.00";
 }
 
 // Function to display the current order details (before placing an order)
